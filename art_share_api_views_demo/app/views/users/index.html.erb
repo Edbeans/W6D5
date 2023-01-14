@@ -1,0 +1,13 @@
+<h1>Here are all of our users!</h1>
+
+<a href="<%= new_user_url %>">Go to New User Form</a>
+
+<ul>
+    <% @uesrs.each do |user| %>  
+        <li>
+            <%# partial file name without the underscore is 'user' %>
+            <%= render 'user', banana: user, action: :index %>
+
+        </li>
+    <% end %>
+</ul> 

@@ -1,0 +1,46 @@
+<h1>Make your own Cat</h1>
+
+<form action="<%= cats_url %>" method="POST">
+    <label>Birth date: 
+        <input type="date" name="cat[birth_date]" value="<%= @cat.birth_date %>">
+    </label>
+
+    <br> 
+
+    <label>Color: 
+        <select name="cat[color]">
+            <option value="Select a Color" disabled="true" selected="true">Select a Color</option>
+            <option value="CAT_COLORS[0]">Orange</option>
+            <option value="CAT_COLORS[1]">Red</option>
+            <option value="CAT_COLORS[2]">Blue</option>
+            <option value="CAT_COLORS[3]">Green</option>
+            <option value="CAT_COLORS[4]">Purple</option>
+            <option value="CAT_COLORS[5]">Black</option>
+        </select>
+    </label>
+
+    <br>
+
+    <label>Name: 
+        <input type="text" name="cat[name]" value="<%= @cat.name %>">
+    </label>
+
+    <br>
+
+    <label>Sex: 
+        <input type="radio" name="cat[sex]" value="M">
+        M
+        <input type="radio" name="cat[sex]" value="F">
+        F
+    </label>
+
+    <br>
+
+    <label>Description: 
+        <textarea name="cat[description]" cols="10" rows ="10"></textarea>
+    </label>
+
+    <input type="submit" value="Create Your Cat Today!">
+</form>
+
+

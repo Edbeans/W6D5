@@ -1,0 +1,27 @@
+<h1>Edit User</h1>
+
+<!--
+<form action="<%= user_url(@user) %>" method="POST"> <%#The method will always be POST %>
+    <input type="hidden" name="_method" value="PATCH"> <%#Can change the POST to a PATCH method%>
+    
+    <label>Username:
+        <%#= prefill input %>
+        <input type="text" name="user[username]" value="<%= @user.username %>">
+    </label>
+
+    <br>
+
+    <label>Age:
+        <input type="text" name="user[age]" value="<%= @user.age %>">
+    </label>
+    
+    <br>
+
+    <label>Email:
+        <input type="text" name="user[email]" value="<%= @user.email %>">
+    </label>
+
+    <input type="submit" value="Update User"> 
+</form>
+--> 
+<%= render 'form', banana: @user, type: edit %> 

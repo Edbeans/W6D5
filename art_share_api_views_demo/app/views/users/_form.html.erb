@@ -1,0 +1,42 @@
+<% if type == :new %>
+<%# if we are doing a new form, should send us to create  %>
+    <% action_url = users_url %>
+    <% button_text = "Create User" %>
+<% else %>
+    <% action_url = users_url(banana) %>
+    <% button_text = "Update User" %>
+<% end %>
+
+
+
+
+
+<form action="<%= users_url %>" method="POST">
+<% if type == :edit %>
+    <input type="hidden" name="_method" value="PATCH">
+<% end %>
+
+    <%# Because we used the for id tag we didn't wrap a label around the input  %>
+    <%# Showing two different ways to use labels %>
+    <label for="username">Username:</label> 
+    <input type="text" name="user[username]" id="username" value="<%= banana.username %>">
+    
+    <br>
+
+    <label>Age:
+        <input type="text" name="user[age]" value="<%= banana.age %>">
+    <label>
+
+    <br>
+
+    <label>Email:
+        <input type="text" name="user[email]" value="<% banana.email %>">
+    </label>
+
+    <br>
+
+    <%# Button to send the form  %>
+    <input type="submit" value= button_text>
+
+    <%# <button>Create User</button> this is an alternative to submit a button but not common use %>
+</form>

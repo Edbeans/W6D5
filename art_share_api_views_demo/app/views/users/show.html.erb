@@ -1,0 +1,9 @@
+<h1>Here is our user show page!</h1>
+
+<a href="<%= edit_user_url(@user)%>">Edit User</a>
+
+<%= render 'user', banana: @user action: :show %>
+
+<form action="<% user_url(@user) %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+</form>

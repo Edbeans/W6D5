@@ -1,0 +1,35 @@
+<h1>User New Page</h1>
+
+
+<!--
+<%# action needs to be path to create user, method always POST %>
+<%# action is the path and method is the HTTP verb  %>
+<form action="<%= users_url %>" method="POST">
+
+    <%# Because we used the for id tag we didn't wrap a label around the input  %>
+    <%# Showing two different ways to use labels %>
+    <label for="username">Username:</label> 
+    <input type="text" name="user[username]" id="username" value="<%= @user.username %>">
+    
+    <br>
+
+    <label>Age:
+        <input type="text" name="user[age]" value="<%= @user.age %>">
+    <label>
+
+    <br>
+
+    <label>Email:
+        <input type="text" name="user[email" value="<% @user.email %>">
+    </label>
+
+    <br>
+
+    <%# Button to send the form  %>
+    <input type="submit" value="">
+
+    <%# <button>Create User</button> this is an alternative to submit a button but not common use %>
+</form>
+--> 
+
+<%= render 'form', banana: @user, type: :new %>
